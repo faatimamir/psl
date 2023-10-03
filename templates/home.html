@@ -1,0 +1,28 @@
+<div>
+  <h1 align=center style="margin: 20px;">Pakistani Sign Language Recognition System</h1>
+  </div>
+  {% extends 'base.html' %}
+  {% load static %}
+  
+  
+  {% block content %}
+  <!-- <video width="500" height="900" class="center" autoplay loop>
+    <source src= "{% static 'Hello.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> -->
+   <head>
+    <style>/* CSS for the image with shadow */
+      .image-with-shadow {
+          box-shadow: 4px 10px 20px rgba(0, 0, 0, 0.2); /* Adjust the shadow properties as needed */
+      }
+      </style>
+   </head>
+    <div class="homeImg" align = "center" >
+      <img src="{% static 'home4.jpg' %}" width="60%"  height="50%"  alt="Image with Shadow" class="image-with-shadow" >
+     
+    <!-- <a href="{% url 'animation' %}"><button class="button">Text/audio to SL</button></a> -->
+    </div>
+    
+    
+  {% endblock %}
+  

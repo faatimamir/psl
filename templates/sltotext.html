@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <style>
+        .custom-button{
+            border-radius: 50px;
+            padding: 8px 10px;
+
+        }
+
+        
+        .custom-button:hover {
+    background-color: #ede4e4;  
+    color: black;   
+    font-size: 12px;        
+    padding: 10px 12px;
+    border:1px solid black ;
+    box-shadow: 0 0 5px rgb(10, 63, 10);
+    cursor:pointer;
+    color: rgb(9, 75, 44);
+    
+}
+    </style>
+</head>
+<h1>Video Live Stream</h1>
+
+<!-- {% comment %}  Mode selection buttons -->
+<!-- <button onclick="window.location.href='{% url 'webcam_feed_mode' '1' %}'">WORDS</button>
+<button onclick="window.location.href='{% url 'webcam_feed_mode' '2' %}'">NUMBERS</button> {% endcomment %}
+Mode selection buttons with inline CSS --> 
+<div style="margin-bottom: 20px;">
+<button class="custom-button"  onclick="window.location.href='{% url 'webcam_feed_mode' '1' %}'">WORDS</button>
+<button class="custom-button"  onclick="window.location.href='{% url 'webcam_feed_mode' '2' %}'">NUMBERS</button>
+<button class="custom-button"  onclick="window.location.href='{% url 'webcam_feed_mode' '3' %}'">URDU HUROOF</button>
+<button class="custom-button"  onclick="window.location.href='{% url 'webcam_feed_mode' '4' %}'">SMALL ALP</button>
+</div>
+<!-- Webcam Feed -->
+<img src="{% url 'webcam_feed_mode' '1' %}"> <!-- Default mode set to '1' -->
+
+{% endblock %}
